@@ -1,8 +1,10 @@
 import React, { use } from "react";
+import ModelCard from "./ModelCard";
 
-const Models = ({ modelPromise }) => {
+const Models = ({ modelPromise, setCarts, carts }) => {
   const models = use(modelPromise);
-  console.log(models);
+  // console.log(models);
+
   return (
     <div className="py-20 max-w-7xl mx-auto">
       <div className="text-center">
@@ -11,26 +13,12 @@ const Models = ({ modelPromise }) => {
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
         {models.map((model) => (
-          <div className="shadow-lg rounded-lg border border-zinc-300 overflow-hidden ">
-            <div className="flex justify-center items-center h-56 bg-zinc-200">
-              <img
-                className="h-40 w-40 object-contain"
-                src={model.image}
-                alt=""
-              />
-            </div>
-            <div className="p-4 space-y-3">
-              <h2 className="text-2xl font-bold">{model.title}</h2>
-              <p className="text-gray-400">{model.description}</p>
-              <div className="text-2xl font-bold">${model.price}/month</div>
-              <button
-                className="btn w-full bg-red-500 text-white rounded-lg
-               mt-5"
-              >
-                Subscribe Now
-              </button>
-            </div>
-          </div>
+          <ModelCard
+            key={model.id}
+            model={model}
+            carts={carts}
+            setCarts={setCarts}
+          ></ModelCard>
         ))}
       </div>
     </div>
