@@ -33,7 +33,13 @@ function App() {
             setCarts={setCarts}
           ></Models>
         )}
-        {activeTabs === "cart" && <Card carts={carts}></Card>}
+        {activeTabs === "cart" && (
+          <Card
+            carts={carts}
+            setCarts={setCarts}
+            setActiveTabs={setActiveTabs}
+          ></Card>
+        )}
       </Suspense>
 
       <Footer></Footer>

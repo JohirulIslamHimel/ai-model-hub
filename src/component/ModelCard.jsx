@@ -8,7 +8,7 @@ const ModelCard = ({ model, setCarts, carts }) => {
   };
   return (
     <div className="shadow-lg rounded-lg border border-zinc-300 overflow-hidden ">
-      <div className="flex justify-center items-center h-56 bg-zinc-200">
+      <div className="flex justify-center items-center h-56 bg-zinc-200 hover:scale-[1.01] hover:shadow-2xl transition-all duration-300 ">
         <img
           className="h-40 w-40 object-contain"
           src={model.image}
@@ -23,8 +23,12 @@ const ModelCard = ({ model, setCarts, carts }) => {
         </div>
         <button
           onClick={handleSubscription}
-          className="btn w-full bg-red-500 text-white rounded-lg
-               mt-5"
+          disabled={isSubscribed}
+          className={`btn w-full py-3 rounded-xl mt-5 font-bold transition-all ${
+            isSubscribed
+              ? "bg-green-500 text-white cursor-default"
+              : "bg-red-500 hover:bg-red-600 text-white shadow-md hover:shadow-red-200"
+          }`}
         >
           {isSubscribed ? "Subscribed" : "Subscribe Now"}
         </button>
