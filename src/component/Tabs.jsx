@@ -1,6 +1,6 @@
 import React from "react";
 
-const Tabs = ({ activeTabs, setActiveTabs }) => {
+const Tabs = ({ activeTabs, setActiveTabs, carts }) => {
   return (
     <div className="tabs tabs-box justify-center bg-transparent">
       <input
@@ -19,7 +19,7 @@ const Tabs = ({ activeTabs, setActiveTabs }) => {
             ? "bg-linear-to-r from-[#ff3377] to-[#ff4d4d] text-white"
             : "bg-gray-200 text-gray-600"
         }`}
-        aria-label="Cart"
+        aria-label={`Cart (${carts.length})`}
         onClick={() => setActiveTabs("cart")}
       />
     </div>

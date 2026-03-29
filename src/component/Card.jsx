@@ -1,12 +1,13 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const Card = ({ carts, setCarts, setActiveTabs }) => {
   const totalPrice = carts.reduce((sum, item) => sum + item.price, 0);
 
   const handlePayment = () => {
     if (carts.length > 0) {
-      alert("Payment Successful!");
       setCarts([]);
+      toast.success("Payment successful !");
     }
   };
 
@@ -14,6 +15,7 @@ const Card = ({ carts, setCarts, setActiveTabs }) => {
   const removeItem = (id) => {
     const remaining = carts.filter((item) => item.id !== id);
     setCarts(remaining);
+    toast("Item deleted successfully");
   };
 
   return (
@@ -40,9 +42,24 @@ const Card = ({ carts, setCarts, setActiveTabs }) => {
           <div className="space-y-4 mt-5">
             {carts.map((item) => (
               <div
-                className="flex flex-col sm:flex-row items-center justify-between border-2 border-red-100 rounded-3xl p-4 md:p-6 bg-white shadow-sm gap-4"
+                className="relative flex flex-col sm:flex-row items-center justify-between border-2 border-red-100 rounded-3xl p-4 md:p-6 bg-white shadow-sm gap-4 overflow-hidden"
                 key={item.id}
               >
+                {/* Status Badge */}
+                <div
+                  className={`absolute top-0 right-0 px-4 py-1 rounded-bl-2xl text-[10px] uppercase font-bold tracking-wider text-white shadow-sm z-20
+      ${
+        item.status === "popular"
+          ? "bg-blue-500"
+          : item.status === "favourite"
+            ? "bg-amber-500"
+            : item.status === "most-wanted"
+              ? "bg-purple-600"
+              : "bg-gray-400"
+      }`}
+                >
+                  {item.status}
+                </div>
                 <div className="flex items-center gap-5">
                   <div className="bg-zinc-200 p-2 rounded-2xl shrink-0">
                     <img

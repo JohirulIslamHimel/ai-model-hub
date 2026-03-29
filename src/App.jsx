@@ -22,7 +22,11 @@ function App() {
     <>
       <NavBar></NavBar>
       <Banner></Banner>
-      <Tabs activeTabs={activeTabs} setActiveTabs={setActiveTabs}></Tabs>
+      <Tabs
+        activeTabs={activeTabs}
+        setActiveTabs={setActiveTabs}
+        carts={carts}
+      ></Tabs>
       <Suspense
         fallback={<span className="loading loading-spinner loading-sm"></span>}
       >
