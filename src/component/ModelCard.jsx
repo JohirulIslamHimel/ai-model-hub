@@ -17,12 +17,26 @@ const ModelCard = ({ model, setCarts, carts }) => {
   };
   return (
     <div className="shadow-lg rounded-lg border border-zinc-300 overflow-hidden ">
-      <div className="flex justify-center items-center h-56 bg-zinc-200 hover:scale-[1.01] hover:shadow-2xl transition-all duration-300 ">
+      <div className="relative flex justify-center items-center h-56 bg-zinc-200 hover:scale-[1.01] hover:shadow-2xl transition-all duration-300 ">
         <img
           className="h-40 w-40 object-contain"
           src={model.image}
           alt={model.title}
         />
+        {/* Status badge */}
+        {model.status && (
+          <div
+            className={`absolute top-4 right-4 px-4 py-1.5 text-xs font-semibold rounded-full uppercase tracking-wider
+                                        ${model.status === "popular" ? "bg-red-600 text-white" : ""}
+                                        ${model.status === "favourite" ? "bg-orange-500 text-white" : ""}
+                                        ${model.status === "most-wanted" ? "bg-purple-600 text-white" : ""}
+                                    `}
+          >
+            {model.status === "popular" && "🔥 Popular"}
+            {model.status === "favourite" && "❤️ Favourite"}
+            {model.status === "most-wanted" && "⭐ Most Wanted"}
+          </div>
+        )}
       </div>
       <div className="p-4 space-y-3">
         <h2 className="text-2xl font-bold">{model.title}</h2>

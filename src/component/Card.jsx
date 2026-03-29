@@ -42,24 +42,9 @@ const Card = ({ carts, setCarts, setActiveTabs }) => {
           <div className="space-y-4 mt-5">
             {carts.map((item) => (
               <div
-                className="relative flex flex-col sm:flex-row items-center justify-between border-2 border-red-100 rounded-3xl p-4 md:p-6 bg-white shadow-sm gap-4 overflow-hidden"
+                className="flex flex-col sm:flex-row items-center justify-between border-2 border-red-100 rounded-3xl p-4 md:p-6 bg-white shadow-sm gap-4"
                 key={item.id}
               >
-                {/* Status Badge */}
-                <div
-                  className={`absolute top-0 right-0 px-4 py-1 rounded-bl-2xl text-[10px] uppercase font-bold tracking-wider text-white shadow-sm z-20
-      ${
-        item.status === "popular"
-          ? "bg-blue-500"
-          : item.status === "favourite"
-            ? "bg-amber-500"
-            : item.status === "most-wanted"
-              ? "bg-purple-600"
-              : "bg-gray-400"
-      }`}
-                >
-                  {item.status}
-                </div>
                 <div className="flex items-center gap-5">
                   <div className="bg-zinc-200 p-2 rounded-2xl shrink-0">
                     <img
