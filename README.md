@@ -12,7 +12,7 @@ AI Hub is a modern web application designed to offer a centralized marketplace f
 
 ## 🔗 Project Links
 - **Live Demo:** ai-model-hub-h.netlify.app
-- **Repository:** [Insert Your Repo Link Here]
+- **Repository:** https://github.com/JohirulIslamHimel/ai-model-hub
 
 ---
 
@@ -56,7 +56,7 @@ Follow these steps to set up the project on your local machine:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/ai-hub.git](https://github.com/your-username/ai-hub.git)
+   git clone https://github.com/JohirulIslamHimel/ai-model-hub.git
 Navigate to the project directory:
 
 Bash
