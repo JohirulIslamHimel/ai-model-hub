@@ -1,7 +1,7 @@
 Repository Description
 🚀 AI Hub is a premium subscription platform for frontier AI models. Features a dynamic cart system, real-time price calculation, and a modern responsive UI. Built with React, Tailwind CSS, and DaisyUI.
 
-🔗 Live Link: ai-model-hub-h.netlify.app
+🔗 Live Link: [ai-model-hub-h.netlify.app](https://ai-model-hub-h.netlify.app/)
 🛠️ Stack: React | Tailwind CSS | DaisyUI | React-Toastify
 
 2. README.md
