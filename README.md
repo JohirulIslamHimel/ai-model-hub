@@ -1,16 +1,80 @@
-# React + Vite
+Repository Description
+🚀 AI Hub is a premium subscription platform for frontier AI models. Features a dynamic cart system, real-time price calculation, and a modern responsive UI. Built with React, Tailwind CSS, and DaisyUI.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Link: ai-model-hub-h.netlify.app
+🛠️ Stack: React | Tailwind CSS | DaisyUI | React-Toastify
 
-Currently, two official plugins are available:
+2. README.md
+Markdown
+# 🚀 AI Hub - Unified AI Subscription Platform
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+AI Hub is a modern web application designed to offer a centralized marketplace for world-class AI models like ChatGPT, Gemini, Claude, and DeepSeek. The platform provides a seamless user experience, allowing users to browse, select, and manage AI subscriptions through a dynamic interface with real-time feedback.
 
-## React Compiler
+## 🔗 Project Links
+- **Live Demo:** ai-model-hub-h.netlify.app
+- **Repository:** [Insert Your Repo Link Here]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📸 Project Screenshot
+ <img width="1904" height="863" alt="image" src="https://github.com/user-attachments/assets/3859a7e7-a130-4546-89dd-d77da9e21f5d" />
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Main Features
+- **Dynamic AI Catalog:** Browse premium AI models with custom status badges (Popular, Favourite, Most Wanted).
+- **Reactive Cart System:** Efficiently add or remove models from the cart with duplicate entry prevention.
+- **Real-time Price Calculation:** Automatic total price updates using high-performance logic as users modify their cart.
+- **Tab-Based Navigation:** Seamless switching between the Model Marketplace and the Shopping Cart without page reloads.
+- **Instant Notifications:** Integrated `react-toastify` for real-time alerts on actions like adding, deleting, or completing payments.
+- **Fully Responsive UI:** Optimized for a perfect viewing experience across Mobile, Tablet, and Desktop devices.
+
+---
+
+## 🛠️ Technology Stack
+- **Core Framework:** React.js
+- **Styling:** Tailwind CSS (v4)
+- **UI Components:** DaisyUI
+- **Typography:** Outfit (Google Fonts)
+- **State Management:** React Hooks (useState, use)
+
+---
+
+## 📦 Dependencies
+Key libraries used in this project:
+- `react`: Core frontend library
+- `react-dom`: Component rendering
+- `tailwindcss`: Utility-first CSS framework
+- `daisyui`: Tailwind-based component library
+- `react-toastify`: Interactive toast notifications
+
+---
+
+## 🚀 Local Installation Guide
+
+Follow these steps to set up the project on your local machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/ai-hub.git](https://github.com/your-username/ai-hub.git)
+Navigate to the project directory:
+
+Bash
+cd ai-hub
+Install dependencies:
+
+Bash
+npm install
+Run the development server:
+
+Bash
+npm run dev
+Access the App:
+Open your browser and navigate to http://localhost:5173.
+
+👨‍💻 Author
+Johirul Islam
+
+Frontend Developer & SQA Engineer
+
+LinkedIn | GitHub
